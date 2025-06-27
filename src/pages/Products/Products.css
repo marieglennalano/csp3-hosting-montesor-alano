@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.skincare-products {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+@media (min-width: 992px) {
+  .skincare-products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 991px) {
+  .skincare-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .skincare-products {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+  }
+}
+.skincare-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  position: relative;
+  width: 100%;
+  margin-bottom: 0;
+}
+.skincare-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  height: 280px;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fff;
+  padding: 16px;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  transition: transform 0.6s ease;
+}
+
+.skincare-card:hover .product-image {
+  transform: scale(1.08);
+}
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 182, 193, 0.1) 0%,
+    rgba(255, 228, 225, 0.1) 50%,
+    rgba(245, 245, 220, 0.1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.skincare-card:hover .image-overlay {
+  opacity: 1;
+}
+.card-content {
+  padding: 2rem 1.8rem;
+  background: linear-gradient(145deg, #ffffff, #fefefe);
+  position: relative;
+}
+.card-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+}
+.product-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  font-family: Poppins;
+  text-align: center;
+}
+.product-description {
+  font-family: Poppins;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #222222;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+  min-height: 48px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e91e63;
+  margin-bottom: 1.5rem;
+  font-family: Poppins;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+.add-to-cart-btn {
+  background: #ffb7b2 !important;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 32px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  color: #222222;
+}
+
+.add-to-cart-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+.add-to-cart-btn:hover::before {
+  left: 100%;
+}
+.add-to-cart-btn:hover {
+  background: #ffb7b2;
+}
+
+.add-to-cart-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(255, 154, 162, 0.3);
+}
+
+@media (min-width: 1400px) {
+  .skincare-products {
+    padding: 3rem 2rem;
+    gap: 2.5rem;
+    max-width: 1600px;
+  }
+  .image-container {
+    height: 320px;
+  }
+  .product-title {
+    font-size: 1.6rem;
+  }
+  .product-price {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .skincare-products {
+    padding: 2.5rem 1.5rem;
+    gap: 2.2rem;
+  }
+  .image-container {
+    height: 300px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .skincare-products {
+    gap: 1.8rem;
+  }
+  .card-content {
+    padding: 1.8rem 1.5rem;
+  }
+  .product-title {
+    font-size: 1.3rem;
+  }
+  .product-description {
+    font-size: 0.92rem;
+  }
+  .product-price {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .skincare-products {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+  .image-container {
+    height: 260px;
+  }
+  .card-content {
+    padding: 1.6rem 1.3rem;
+  }
+  .product-title {
+    font-size: 1.25rem;
+  }
+  .product-description {
+    font-size: 0.9rem;
+    min-height: 42px;
+  }
+  .product-price {
+    font-size: 1.35rem;
+  }
+  .add-to-cart-btn {
+    padding: 11px 28px;
+    font-size: 0.92rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .skincare-products {
+    padding: 1.2rem 0.8rem;
+    gap: 1.2rem;
+  }
+  .image-container {
+    height: 220px;
+  }
+  .card-content {
+    padding: 1.4rem 1.2rem;
+  }
+  .product-title {
+    font-size: 1.1rem;
+  }
+  .product-description {
+    font-size: 0.88rem;
+    min-height: 40px;
+  }
+  .product-price {
+    font-size: 1.2rem;
+  }
+  .add-to-cart-btn {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 575px) {
+  .skincare-card {
+    border-radius: 16px;
+  }
+  .image-container {
+    height: 200px;
+    border-radius: 16px 16px 0 0;
+  }
+  .card-content {
+    padding: 1.2rem 1rem;
+  }
+  .card-content::before {
+    width: 40px;
+    height: 3px;
+  }
+  .product-title {
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+  }
+  .product-description {
+    font-size: 0.85rem;
+    min-height: 38px;
+    margin-bottom: 1rem;
+  }
+  .product-price {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .add-to-cart-btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    border-radius: 35px;
+  }
+}
+@media (max-width: 400px) {
+  .image-container {
+    height: 180px;
+  }
+  .card-content {
+    padding: 1rem 0.8rem;
+  }
+  .product-title {
+    font-size: 1rem;
+  }
+  .product-description {
+    font-size: 0.8rem;
+    min-height: 32px;
+  }
+  .product-price {
+    font-size: 1.2rem;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .skincare-card:hover {
+    transform: translateY(-6px);
+  }
+  .image-container {
+    height: 160px;
+  }
+  .product-description {
+    min-height: 30px;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .skincare-card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  }
+  .skincare-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  }
+}

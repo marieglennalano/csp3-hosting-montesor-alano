@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.register-wrapper {
+  background: url('../../images/register.png') no-repeat center center;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.register-card {
+  background-color: rgba(236, 233, 234, 0.85);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin: 32px auto 0 auto;
+}
+
+.register-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.register-card h2 {
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #4b3f33;
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.register-card label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.register-card .form-control {
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #e0dcd5;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.register-card .form-control:focus {
+  border-color: #A5B68D;
+  box-shadow: 0 0 0 3px rgba(165, 182, 141, 0.15);
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.register-card .form-control::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  background-color: #A5B68D;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.register-btn:hover:enabled {
+  background-color: #FF9898;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 152, 152, 0.3);
+}
+
+.register-btn:disabled {
+  background-color: #e9e4dc;
+  color: #aaa;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.register-form-group {
+  margin-bottom: 18px;
+}
+
+.register-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+.register-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.register-col {
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Large devices: add top margin for space below navbar */
+@media (min-width: 992px) {
+  .register-card {
+    margin-top: 56px;
+    max-width: 420px;
+    padding: 36px 28px;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .register-card {
+    margin-top: 32px;
+    max-width: 400px;
+    padding: 28px 18px;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 767.98px) {
+  .register-wrapper {
+    align-items: flex-start;
+    padding-top: 24px;
+  }
+  .register-card {
+    margin-top: 0;
+    max-width: 98vw;
+    padding: 18px 8px;
+    border-radius: 14px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+  .register-card {
+    padding: 10px 2px;
+    max-width: 100vw;
+    border-radius: 10px;
+  }
+}

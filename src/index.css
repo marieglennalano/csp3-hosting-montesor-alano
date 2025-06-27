@@ -1,0 +1,13 @@
+/* CSS Reset */
+/*Allows to easily manipulate the sizes and positioning of elements*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.cardHighlight {
+    min-height: 100%;
+}
+
