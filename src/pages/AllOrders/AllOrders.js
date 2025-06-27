@@ -6,6 +6,7 @@ export default function AllOrders() {
   const [ordersLoading, setOrdersLoading] = useState(false);
   const [error, setError] = useState('');
 
+  
   useEffect(() => {
     setOrdersLoading(true);
     fetch('https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/orders/all-orders', {
