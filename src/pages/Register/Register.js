@@ -9,7 +9,6 @@ import './Register.css';
 
 export default function Register() {
   const { user } = useContext(UserContext);
-  const navigate = Navigate();
 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
