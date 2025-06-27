@@ -1,4 +1,4 @@
-# LikhaHome Capstone 3
+# SkinCredible Capstone 3
 
 LikhaHome is a full-stack e-commerce web application built as a capstone project. It features user authentication, product browsing, cart management, search functionality, and an admin dashboard for product and order management.
 
