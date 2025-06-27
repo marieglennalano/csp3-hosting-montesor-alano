@@ -70,8 +70,9 @@ export default function Register() {
 
 
   if (user && user.id !== null) {
-    return <Navigate to="/products" />;
+    return <Navigate to="/products" />;  
   }
+  
 
   return (
     <div className="register-wrapper">
