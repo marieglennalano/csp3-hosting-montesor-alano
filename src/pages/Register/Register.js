@@ -5,10 +5,11 @@ import Swal from 'sweetalert2';
 import UserContext from '../../context/UserContext';
 
 import './Register.css';
-const navigate = Navigate();
+
 
 export default function Register() {
   const { user } = useContext(UserContext);
+  const navigate = Navigate();
 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
