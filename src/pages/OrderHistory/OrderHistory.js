@@ -9,7 +9,7 @@ export default function MyOrders() {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch('https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/orders/my-orders', {
+    fetch('https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/orders/my-orders', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }

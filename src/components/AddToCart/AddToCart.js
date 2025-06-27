@@ -16,7 +16,7 @@ export default function AddToCart({ productId, disabled }) {
       return;
     }
 
-    fetch('https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/cart/add-to-cart', {
+    fetch('https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/cart/add-to-cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

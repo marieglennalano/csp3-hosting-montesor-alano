@@ -28,12 +28,9 @@ export default function Products() {
   const [products, setProducts] = useState([]);
 
   const fetchData = () => {
-    const endpoint = 'https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/products/active';
+    const endpoint = 'https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/products/active';
 
     fetch(endpoint, {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
-      },
     })
       .then(res => res.json())
       .then(data => {

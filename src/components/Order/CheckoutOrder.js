@@ -15,7 +15,7 @@ export default function useCheckoutOrder(fetchCart) {
 
   const checkoutOrder = async () => {
     try {
-      const res = await fetch('https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/orders/checkout', {
+      const res = await fetch('https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/orders/checkout', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`

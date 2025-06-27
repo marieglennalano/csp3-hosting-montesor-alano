@@ -14,7 +14,7 @@ export default function Login() {
 
   function authenticate(e) {
     e.preventDefault();
-    fetch('https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/users/login', {
+    fetch('https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/users/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
@@ -39,7 +39,7 @@ export default function Login() {
   }
 
   function retrieveUserDetails(token) {
-    fetch('https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/users/details', {
+    fetch('https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/users/details', {
       headers: {
         Authorization: `Bearer ${token}`
       }

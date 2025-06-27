@@ -10,8 +10,8 @@ export default function ToggleProductStatus({ productId, isActive, fetchData }) 
     setLoading(true);
 
     const endpoint = isActive
-      ? `https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/products/${productId}/archive`
-      : `https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/products/${productId}/activate`;
+      ? `https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/products/${productId}/archive`
+      : `https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/products/${productId}/activate`;
 
     fetch(endpoint, {
       method: 'PATCH',

@@ -18,7 +18,7 @@ export default function Cart() {
     
     const fetchCart = async () => {
         try {
-            const res = await fetch('https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/cart/get-cart', {
+            const res = await fetch('https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/cart/get-cart', {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
@@ -46,7 +46,7 @@ export default function Cart() {
         if (productDetails[productId]) return;
         
         try {
-            const res = await fetch(`https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/products/${productId}`);
+            const res = await fetch(`https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/products/${productId}`);
             const data = await res.json();
             
             setProductDetails(prev => ({
@@ -54,7 +54,6 @@ export default function Cart() {
                 [productId]: data.product || data
             }));
         } catch (error) {
-            console.error(`❌ Error fetching product ${productId}:`, error);
             notyf.error('Failed to load product details');
         }
     };
@@ -63,7 +62,7 @@ export default function Cart() {
         if (quantity < 1) return;
         
         try {
-            const res = await fetch('https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/cart/update-cart-quantity', {
+            const res = await fetch('https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/cart/update-cart-quantity', {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -80,14 +79,13 @@ export default function Cart() {
                 notyf.error(result?.error || 'Failed to update quantity');
             }
         } catch (error) {
-            console.error('❌ Error updating quantity:', error);
             notyf.error('Failed to update quantity');
         }
     };
     
     const removeFromCart = async (productId) => {
         try {
-            const res = await fetch(`https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/cart/${productId}/remove-from-cart`, {
+            const res = await fetch(`https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/cart/${productId}/remove-from-cart`, {
                 method: 'PATCH',
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -109,7 +107,7 @@ export default function Cart() {
     
     const clearCart = async () => {
         try {
-            const res = await fetch('https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/cart/clear-cart', {
+            const res = await fetch('https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/cart/clear-cart', {
                 method: 'PUT',
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`

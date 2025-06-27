@@ -15,7 +15,7 @@ export default function Profile() {
   const [newPassword, setNewPassword] = useState('');
 
   useEffect(() => {
-    fetch('https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/users/details', {
+    fetch('https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/users/details', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }
@@ -38,7 +38,7 @@ export default function Profile() {
     e.preventDefault();
 
     try {
-      const res = await fetch('https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/users/update-password', {
+      const res = await fetch('https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/users/update-password', {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

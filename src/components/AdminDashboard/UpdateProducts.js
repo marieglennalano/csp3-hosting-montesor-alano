@@ -23,7 +23,7 @@ export default function UpdateProduct({ product, fetchData, children }) {
   const updateProduct = (event) => {
     event.preventDefault();
 
-    fetch(`https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/products/${product._id}/update`, {
+    fetch(`https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/products/${product._id}/update`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

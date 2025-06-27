@@ -8,7 +8,7 @@ export default function AllOrders() {
 
   useEffect(() => {
     setOrdersLoading(true);
-    fetch('https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/orders/all-orders', {
+    fetch('https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/orders/all-orders', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
       },

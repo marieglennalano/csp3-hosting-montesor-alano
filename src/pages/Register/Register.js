@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import UserContext from '../../context/UserContext';
 
 import './Register.css';
+const navigate = Navigate();
 
 export default function Register() {
   const { user } = useContext(UserContext);
@@ -19,7 +20,7 @@ export default function Register() {
   const registerUser = (e) => {
     e.preventDefault();
 
-    fetch('https://dpgijq59ve.execute-api.us-west-2.amazonaws.com/production/users/register', {
+    fetch('https://sw3285xufl.execute-api.us-west-2.amazonaws.com/production/users/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -37,9 +38,9 @@ export default function Register() {
           setLastName('');
           setEmail('');
           setMobileNo('');
-          setPassword('');
+          setPassword(''); 
           Swal.fire({
-            title: 'Registration Successful',
+            title: 'Registration Successful', 
             icon: 'success',
             text: 'Thank you for registering!',
           });
